@@ -1,14 +1,3 @@
-// const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg"];
-
-// const chooseImg = images[Math.floor(Math.random() * images.length)];
-
-// const bgImg = document.createElement("img");
-
-// bgImg.src = `img/${chooseImg}`;
-
-// document.body.appendChild(bgImg);
-
-
 const figcation = document.querySelector(".figcaption figcaption");
 const API_KEY="563492ad6f91700001000001d011baf122ad40aab24ea60dede6de10";
 
@@ -31,10 +20,9 @@ async function CuratedPhotos(){
 
 function display_images(response){
     const chooseImg = response.photos[Math.floor(Math.random() * response.photos.length)];
-    const bgImg = document.createElement("img");
-    bgImg.src = `${chooseImg.src.landscape}`;
-    document.body.appendChild(bgImg);
-    figcation.innerText = `Photo By ${chooseImg.photographer}📸`;
+    const body = document.body;
+    body.style.backgroundImage = `url('${chooseImg.src.landscape}')`
+    figcation.innerText = `📸Photo By ${chooseImg.photographer}`;
 }
 
 // https://dev.to/nehasoni__/create-an-amazing-image-search-app-using-pexels-api-2cf
