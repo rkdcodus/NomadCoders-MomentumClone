@@ -31,8 +31,18 @@ body {
 #greeting {
     font-size: 3em;
 }
-
-#todo-form input {
+#login-form input {
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    width: 500px;
+    height: 50px;
+    font-weight: lighter;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+#todo-form input{
     border: none;
     border-bottom: 3px solid white;
     background-color: transparent;
@@ -44,7 +54,8 @@ body {
     text-align: center;
 }
 
-#todo-form input:focus-visible {
+#todo-form input:focus-visible,
+#login-form input:focus-visible {
     outline: none;
 }
 #quote {
